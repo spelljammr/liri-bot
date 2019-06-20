@@ -51,7 +51,7 @@ Shows the following information in Terminal:
 
 * Movie title
 * Release year
-* IMDB Rating
+* IMDB rating
 * Rotten Tomatoes rating
 * Country of production
 * Plot synopsis
@@ -69,10 +69,11 @@ Uses text found in the file, `random.txt` and queries it using spotify-this-song
 ## **Tech Used**
 * Node.js
 * Axios
-* node-spotify-api
+* Node Spotify API
 * OMDB API
 * BandsInTown API
 * Moment.js
+* jQuery
 * GitHub
 
 
