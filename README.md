@@ -25,7 +25,7 @@ This assignment was completed as a homework during the UC Berkeley Extension's F
 
 ### **Find Upcoming Concerts Using BandsInTown**
 
-![movie-this](./images/concert-this.png)
+![concert-this](./images/concert-this.png)
 
 >`node liri.js concert-this <artist name>`
 
@@ -37,7 +37,7 @@ Displays upcoming concerts with the following details in Terminal:
 
 ### **Find a Song using the Spotify API**
 
-![movie-this](./images/spotify-this-song.png)
+![spotify-this-song](./images/spotify-this-song.png)
 
 >`node liri.js spotify-this-song <song name>`
 
