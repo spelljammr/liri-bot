@@ -114,14 +114,6 @@ function getMovie(movieName) {
         });
 };
 
-
-
-
-
-
-
-
-
 // Concert this
 // If first element is concert-this...
 if (args[0] === "concert-this") {
