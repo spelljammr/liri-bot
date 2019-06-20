@@ -66,7 +66,7 @@ Shows the following information in Terminal:
 * Plot synopsis
 * Actors
 
-*If no movie is specified, it will default to "Bad Santa"*
+*If no movie is specified, it will default to "Bad Santa".*
 
 ### **Find a song using text from a file**
 
