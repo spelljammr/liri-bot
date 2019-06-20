@@ -27,7 +27,7 @@ This assignment was completed as a homework during the UC Berkeley Extension's F
 
 ![movie-this](./images/concert-this.png)
 
->`node liri.js concert-this`
+>`node liri.js concert-this <artist name>`
 
 Displays upcoming concerts with the following details in Terminal:
 * Venue
