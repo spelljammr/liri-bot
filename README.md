@@ -68,11 +68,13 @@ Shows the following information in Terminal:
 
 *If no movie is specified, it will default to "Bad Santa"*
 
-### **Find a movie using text from a file**
+### **Find a song using text from a file**
 
 >`node liri.js do-what-it-says`
 
-Uses text found in the file, `random.txt` and queries it using spotify-this-song
+Uses text found in the file, `random.txt` and queries it using spotify-this-song.
+
+*Currently, the file is set to search for "I Want It That Way" by The Backstreet Boys.* 
 
 ---
 
