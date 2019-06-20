@@ -27,12 +27,14 @@ if (args[0] === "movie-this") {
 };
 
 
+
 // Spotify this song
-// If no args are used, return results for Daly City Train
+// If first element is spotify-this-song
 if (args[0] === "spotify-this-song") {
+    // ...and second element is undefined, search Daly City Train
     if (args[1] === undefined) {
         spotifySong("Daly City Train")
-            // Otherwise search using user input
+            // Otherwise search using user input and split everything after, joining with a " ".
     } else {
         let songTitle = args.slice(1).join(" ");
         spotifySong(songTitle);
@@ -41,22 +43,30 @@ if (args[0] === "spotify-this-song") {
 
 
 // Search using 'do-what-it-says' as input
+// If first element is do-what-it-says
 if (args[0] === "do-what-it-says") {
+    // Use fs to grab the text from "random.txt"
     fs.readFile("random.txt", "utf8", function(error, data) {
         if (error) {
             return console.log(error);
         }
         dataArr = data.split(",");
+        // If movie-this is first element
         if (dataArr[0] === "movie-this") {
+            // ...and nothing as second element, search Bad Santa
             if (dataArr[1] === undefined) {
                 getMovie("Bad+Santa");
+                // ...but if elements are there, split terms after index 1 and join separate words with a "+"
             } else {
                 getMovie(dataArr[1].split().join("+"))
             }
         };
+        // If first element is spotify-this-song
         if (dataArr[0] === "spotify-this-song") {
+            // ...and second element is undefined, search "Daly City Train".
             if (dataArr[1] === undefined) {
                 spotifySong("Daly City Train")
+                    // Otherwise, search using second element
             } else {
                 spotifySong(dataArr[1])
             }
@@ -97,6 +107,43 @@ function getMovie(movieName) {
             console.log(`Language: ${movie.data.Language}`)
             console.log(`Plot: ${movie.data.Plot}`);
             console.log(`Starring: ${movie.data.Actors}`);
+        })
+        // If nothing returned, return error
+        .catch(function(err) {
+            console.log(err);
+        });
+};
+
+
+
+
+
+
+
+
+
+// Concert this
+// If first element is concert-this...
+if (args[0] === "concert-this") {
+    // ...and second is undefined, use rancid
+    if (args[1] === undefined) {
+        getConcerts("Rancid");
+        // ...otherwise, use user input and join separate words by "+".
+    } else {
+        getConcerts(args.slice(1).join("+"));
+    }
+};
+
+// Grab band name and search concert-this
+function getConcerts(artistName) {
+    axios
+    // Make call to axios w/ artist name
+        .get(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=codingbootcamp`)
+        .then(function(EventData) {
+            console.log("");
+            console.log(`Venue Name: ${EventData.venue}`);
+            console.log(`Venue Location: ${venueData.city}, ${venueData.state} ${venueData.country}`);
+            console.log(`Event Date: ${venueData.datetime}`);
         })
         // If nothing returned, return error
         .catch(function(err) {
