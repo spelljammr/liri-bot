@@ -1,4 +1,5 @@
 require("dotenv").config();
+const moment = require("moment");
 
 // Variable assignment
 // Get axios package
@@ -132,10 +133,11 @@ function getConcerts(artistName) {
         .get(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=codingbootcamp`)
         .then(function(response) {
             for (i = 0; i < response.data.length; i++) {
+                let dateReform = moment(response.data[i].datetime).format('MMMM Do YYYY');
                 console.log("");
                 console.log(`Venue: ${response.data[i].venue.name}`);
                 console.log(`Where: ${response.data[i].venue.city}, ${response.data[0].venue.region} ${response.data[0].venue.country}`);
-                console.log(`Event Date: ${response.data[i].datetime}`);
+                console.log(`Event Date: ${dateReform}`);
                 console.log(`Lineup: ${response.data[i].lineup}`);
             };
         })

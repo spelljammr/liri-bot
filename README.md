@@ -72,6 +72,7 @@ Uses text found in the file, `random.txt` and queries it using spotify-this-song
 * node-spotify-api
 * OMDB API
 * BandsInTown API
+* Moment.js
 * GitHub
 
 
