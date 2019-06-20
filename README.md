@@ -24,6 +24,9 @@ This assignment was created as a homework during the UC Berkeley Extension's Ful
 ## **Command Usage**
 
 ### **Find Upcoming Concerts Using BandsInTown**
+
+![movie-this](./images/concert-this.png)
+
 >`node liri.js concert-this`
 
 Displays upcoming concerts with the following details in Terminal:
@@ -33,6 +36,9 @@ Displays upcoming concerts with the following details in Terminal:
 * Lineup
 
 ### **Find a Song using the Spotify API**
+
+![movie-this](./images/spotify-this-song.png)
+
 >`node liri.js spotify-this-song <song name>`
 
 Returns the following information in Terminal:
@@ -45,6 +51,9 @@ Returns the following information in Terminal:
 *If no track is specified, it will default to "Daly City Train" by Rancid.*
 
 ### **Find a movie using the OMDB API**
+
+![movie-this](./images/movie-this.png)
+
 >`node liri.js movie-this <movie name>`
 
 Shows the following information in Terminal:
@@ -60,6 +69,7 @@ Shows the following information in Terminal:
 *If no movie is specified, it will default to "Bad Santa"*
 
 ## **Find a movie using text from a file**
+
 >`node liri.js do-what-it-says`
 
 Uses text found in the file, `random.txt` and queries it using spotify-this-song
