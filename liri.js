@@ -41,6 +41,17 @@ if (args[0] === "spotify-this-song") {
     }
 };
 
+// Concert this
+// If first element is concert-this...
+if (args[0] === "concert-this") {
+    // ...and second is undefined, use rancid
+    if (args[1] === undefined) {
+        getConcerts("Rancid");
+        // ...otherwise, use user input and join separate words by " ".
+    } else {
+        getConcerts(args.slice(1).join(" "));
+    }
+};
 
 // Search using 'do-what-it-says' as input
 // If first element is do-what-it-says
@@ -112,18 +123,6 @@ function getMovie(movieName) {
         .catch(function(err) {
             console.log(err);
         });
-};
-
-// Concert this
-// If first element is concert-this...
-if (args[0] === "concert-this") {
-    // ...and second is undefined, use rancid
-    if (args[1] === undefined) {
-        getConcerts("Rancid");
-        // ...otherwise, use user input and join separate words by " ".
-    } else {
-        getConcerts(args.slice(1).join(" "));
-    }
 };
 
 // Grab band name and search concert-this
