@@ -1,13 +1,15 @@
-# liri-bot
+# LIRI-Bot
 
-## LIRI-Bot
+## **Overview**
 
-This assignment was created as a homework during the UC Berkeley Extension's Full Stack Bootcamp. For this assignment, we were challenged to utilize our newly acquired Node.js skills in order to create an application that can do the following on command:
+This assignment was created as a homework during the UC Berkeley Extension's Full Stack Bootcamp. For this assignment, we were challenged to utilize our newly acquired Node.js skills in order to create an application that can retrieve the following on command.
 
-* Retrieve Spotify search results
-* Retrieve upcoming concerts for a queried artist.
+* Upcoming concert dates for a specified artist
+* Spotify search results for a specified song
+* Details from a specified movie
 
-## Installation
+---
+## **Installation**
 1. From terminal or git-terminal, navigate to your desired download directory and run the following:
 
     `git clone https://github.com/ahydorn/liri-bot.git`
@@ -17,19 +19,22 @@ This assignment was created as a homework during the UC Berkeley Extension's Ful
     * `concert-this <artist name>`
     * `spotify-this-song <song title>`
     * `movie-this <movie name>`
+---    
 
-## Command Usage
+## **Command Usage**
 
-### Find Upcoming Concerts Using BandsInTown
-`node liri.js concert-this`
+### **Find Upcoming Concerts Using BandsInTown**
+>`node liri.js concert-this`
+
 Displays upcoming concerts with the following details in Terminal:
 * Venue
 * Location
 * Event Date
 * Lineup
 
-### Find a Song using the Spotify API
-`node liri.js spotify-this-song <song name>`
+### **Find a Song using the Spotify API**
+>`node liri.js spotify-this-song <song name>`
+
 Returns the following information in Terminal:
 
 * Artist(s)
@@ -37,10 +42,11 @@ Returns the following information in Terminal:
 * Spotify preview link
 * The album on which the song appears
 
-*If no track is specified, it will default to *"Daly City Train"* by Rancid.
+*If no track is specified, it will default to "Daly City Train" by Rancid.*
 
-### Find a movie using the OMDB API
-`node liri.js movie-this <movie name>`
+### **Find a movie using the OMDB API**
+>`node liri.js movie-this <movie name>`
+
 Shows the following information in Terminal:
 
 * Movie title
@@ -53,18 +59,20 @@ Shows the following information in Terminal:
 
 *If no movie is specified, it will default to "Bad Santa"*
 
-## Find a movie using text from a file
-`node liri.js do-what-it-says`
+## **Find a movie using text from a file**
+>`node liri.js do-what-it-says`
 
-Takes the text from random.txt and runs the song through spotify-this-song command
-Tech used
-Node.js
-Twitter NPM Package - https://www.npmjs.com/package/twitter
-Spotify NPM Package - https://www.npmjs.com/package/spotify
-Request NPM Package - https://www.npmjs.com/package/request
-Prerequisites
-- Node.js - Download the latest version of Node https://nodejs.org/en/
-Built With
-Sublime Text - Text Editor
-Authors
-Stefanie Ding - Node JS - Stefanie Ding
+Uses text found in the file, `random.txt` and queries it using spotify-this-song
+
+---
+
+## **Tech Used**
+* Node.js
+* Axios
+* node-spotify-api
+* OMDB API
+* BandsInTown API
+* GitHub
+
+
+**Created by Adam Hydorn for UC Berkeley Extension Full Stack Bootcamp, 2019**
