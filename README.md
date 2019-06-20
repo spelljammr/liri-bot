@@ -68,7 +68,7 @@ Shows the following information in Terminal:
 
 *If no movie is specified, it will default to "Bad Santa"*
 
-## **Find a movie using text from a file**
+### **Find a movie using text from a file**
 
 >`node liri.js do-what-it-says`
 
