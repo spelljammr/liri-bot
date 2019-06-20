@@ -131,11 +131,13 @@ function getConcerts(artistName) {
     // Make call to axios w/ artist name
         .get(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=codingbootcamp`)
         .then(function(response) {
-            console.log("");
-            console.log(`Venue: ${response.data[0].venue.name}`);
-            console.log(`Where: ${response.data[0].venue.city}, ${response.data[0].venue.region} ${response.data[0].venue.country}`);
-            console.log(`Event Date: ${response.data[0].datetime}`);
-            console.log(`Lineup: ${response.data[0].lineup}`);
+            for (i = 0; i < response.data.length; i++) {
+                console.log("");
+                console.log(`Venue: ${response.data[i].venue.name}`);
+                console.log(`Where: ${response.data[i].venue.city}, ${response.data[0].venue.region} ${response.data[0].venue.country}`);
+                console.log(`Event Date: ${response.data[i].datetime}`);
+                console.log(`Lineup: ${response.data[i].lineup}`);
+            };
         })
         // If nothing returned, return error
         .catch(function(err) {
