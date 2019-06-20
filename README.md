@@ -2,7 +2,7 @@
 
 ## **Overview**
 
-This assignment was created as a homework during the UC Berkeley Extension's Full Stack Bootcamp. For this assignment, we were challenged to utilize our newly acquired Node.js skills in order to create an application that can retrieve the following on command.
+This assignment was completed as a homework during the UC Berkeley Extension's Full Stack Bootcamp. We were challenged to leverage our newly acquired Node.js skills in order to create an application which retrieves the following on command.
 
 * Upcoming concert dates for a specified artist
 * Spotify search results for a specified song
@@ -12,13 +12,13 @@ This assignment was created as a homework during the UC Berkeley Extension's Ful
 ## **Installation**
 1. From terminal or git-terminal, navigate to your desired download directory and run the following:
 
-    `git clone https://github.com/ahydorn/liri-bot.git`
+    >`git clone https://github.com/ahydorn/liri-bot.git`
 
 2. After installation, navigate inside the newly downloaded folder and run `npm install`
 3. When complete, run `node liri.js` or one of the following commands without quotation marks:
-    * `concert-this <artist name>`
-    * `spotify-this-song <song title>`
-    * `movie-this <movie name>`
+   > * `concert-this <artist name>`
+    >* `spotify-this-song <song title>`
+    >* `movie-this <movie name>`
 ---    
 
 ## **Command Usage**
