@@ -94,6 +94,7 @@ function getMovie(movieName) {
             console.log(`IMDB Raiting: ${movie.data.Ratings[0].Value}`);
             console.log(`Rotten Tomatoes Rating: ${movie.data.Ratings[1].Value}`);
             console.log(`Produced in: ${movie.data.Country}`);
+            console.log(`Language: ${movie.data.Language}`)
             console.log(`Plot: ${movie.data.Plot}`);
             console.log(`Starring: ${movie.data.Actors}`);
         })
