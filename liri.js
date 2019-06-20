@@ -128,9 +128,9 @@ if (args[0] === "concert-this") {
     // ...and second is undefined, use rancid
     if (args[1] === undefined) {
         getConcerts("Rancid");
-        // ...otherwise, use user input and join separate words by "+".
+        // ...otherwise, use user input and join separate words by " ".
     } else {
-        getConcerts(args.slice(1).join("+"));
+        getConcerts(args.slice(1).join(" "));
     }
 };
 
@@ -139,11 +139,12 @@ function getConcerts(artistName) {
     axios
     // Make call to axios w/ artist name
         .get(`https://rest.bandsintown.com/artists/${artistName}/events?app_id=codingbootcamp`)
-        .then(function(EventData) {
+        .then(function(response) {
             console.log("");
-            console.log(`Venue Name: ${EventData.venue}`);
-            console.log(`Venue Location: ${venueData.city}, ${venueData.state} ${venueData.country}`);
-            console.log(`Event Date: ${venueData.datetime}`);
+            console.log(`Venue: ${response.data[0].venue.name}`);
+            console.log(`Where: ${response.data[0].venue.city}, ${response.data[0].venue.region} ${response.data[0].venue.country}`);
+            console.log(`Event Date: ${response.data[0].datetime}`);
+            console.log(`Lineup: ${response.data[0].lineup}`);
         })
         // If nothing returned, return error
         .catch(function(err) {
