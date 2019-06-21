@@ -14,7 +14,7 @@ This assignment was completed as a homework during the UC Berkeley Extension's F
 
     >`git clone https://github.com/ahydorn/liri-bot.git`
 
-2. After installation, navigate inside the newly downloaded folder and run `npm install`
+2. After installation, navigate inside the newly downloaded folder and run `npm install` or `npm i`.
 3. When complete, run `node liri.js` or one of the following commands without quotation marks:
    > * `concert-this <artist name>`
     >* `spotify-this-song <song title>`
