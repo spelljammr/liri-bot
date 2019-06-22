@@ -23,7 +23,7 @@ This assignment was completed as a homework during the UC Berkeley Extension's F
 
 ## **Command Usage**
 
-### **Find upcoming concerts using BandsInTown**
+### **Find upcoming concerts using the BandsInTown API**
 
 ![concert-this](./images/concert-this.png)
 
